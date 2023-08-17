@@ -38,6 +38,7 @@ ROLES_LIST=$(git diff --dirstat=files,0,cumulative HEAD^..HEAD | sed "s|^[ 0-9.]
 if [ ${TEST_ALL_ROLES} == 'yes' ]; then
     ROLES_LIST=$(ls -1)
 fi
+ROLES_LIST=edpm_ovn
 
 git clone https://github.com/openstack-k8s-operators/install_yamls /root/src/github.com/openstack-k8s-operators/install_yamls || true
 
